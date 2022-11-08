@@ -1,30 +1,40 @@
-const userInput = document.getElementById("text");
+const userInput = document.getElementById("userInput");
 const button = document.getElementById("submit");
-let output = document.getElementById("output");
+const output = document.getElementById("output");
 
-let words = [
-  "hallo",
-  "Auto",
-  "Waschmaschine",
-  "Schrank",
-  "Katze",
-  "Beispiel",
-  "Eltern",
-  "Fenster",
-  "Geburtstag",
-  "Himmel",
-  "schwimmen",
-  "Zeitung",
-];
+let o = "";
 
 button.addEventListener("click", () => {
   event.preventDefault();
-  console.log(Number(userInput.value));
+  for (let i = 1; i <= Number(userInput.value); i++) {
+    o += "o";
+  }
 
-  const result = words.filter((word) => word.length == Number(userInput.value));
-  console.log(result);
-  output.innerHTML = result;
+  document.getElementById("output").innerHTML = `L${o}P`;
+  userInput.value.refresh();
 });
+
+// console.log("%c Aufgabe 3", "color: tomato")
+// // Aufgabe 3: the tree
+// // *
+// // **
+// // ***
+// // ****
+// // *****
+// // ******
+
+// let stars = '';
+
+// for (let i = 0; i < 6; i++) {
+//     console.log(i);
+//     // neuer wert stars = alter wert stars + "*";
+//     // langschreib variante
+//     // stars = stars + "*";
+//     // stars = alter value + something
+//     // kurzschreib variante
+//     stars += '*';
+//     console.log(stars);
+// }
 
 // for (let i = 1; i <= 7; i++) {
 //     console.log(i);
